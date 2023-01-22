@@ -11,14 +11,18 @@ pip install -r requirements.txt
 
 ## Usage
 ```
-python main.py [-url YOUTUBE_URL] [--pause N] [--force]
+python main.py [-url YOUTUBE_URL] [--pause] [--force] [--model=base] [--words=5]
 ```
-`--url`: Specify Youtube link. It is required for the first time use.
+`--url`: Specify Youtube link. It is required for the first time use. If not set, play cached video.
 
 `--pause`: Manually set pause duration. If not set, It will equal the original sentence duration.
 
 `--force`: Re-processing video
 
-`--model`: Choose Whisper model size: tiny | base | small | medium | large
+`--model`: Choose Whisper model size: `tiny` | `base` | `small` | `medium` | `large`. Default `base`
 
-`--word`: At least # words in a segment. Default 5.
+`--words`: At least # words in a segment. Default 5.
+
+
+## Todo
+ - adjust speed
