@@ -6,7 +6,7 @@ import time
 import os
 import winsound
 
-def play(mp3_path="test.mp3", script_path='script.json', stop=0):
+def play(mp3_path="test.mp3", script_path='script.json', stop=0, n_words=10):
     frequency = 2500  # Set Frequency To 2500 Hertz
     duration = 200  # Set Duration To 1000 ms == 1 second
 
@@ -22,7 +22,27 @@ def play(mp3_path="test.mp3", script_path='script.json', stop=0):
     with open(script_path) as f:
         data = json.load(f)
 
+    # Concate if word num < words
+    segs = []
+    word_num = 0
     for seg in data['segments']:
+        if word_num==0:
+            segs.append({
+                'start': seg['start'],
+                'end': seg['end'],
+                'text': seg['text']
+            })
+            word_num += len(seg['text'].split())
+        else:
+            segs[-1]['end'] = seg['end']
+            segs[-1]['text'] += seg['text']
+            word_num += len(seg['text'].split())
+
+        if word_num >= n_words:
+            word_num = 0
+
+
+    for seg in segs:
         start = seg['start']*1000
         end = seg['end']*1000
 
