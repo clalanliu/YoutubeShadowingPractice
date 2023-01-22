@@ -11,6 +11,7 @@ def get_parser():
     parser.add_argument("--url", '-u', default=None)
     parser.add_argument('--force', '-f', help="Force downlading", action="store_true")
     parser.add_argument('--pause', '-p', help="If set, pause # second after each segment", default=0, type=float)
+    parser.add_argument('--model', '-m', help="Model Size [tiny|base|small|medium|large]", default="base")
     return parser
 
 if __name__ == "__main__":
@@ -23,7 +24,7 @@ if __name__ == "__main__":
             print("Converting ...")
             convert_video_to_audio_ffmpeg('test.mp4')
             print("Generating Scripts ...")
-            split_video('test.mp3')
+            split_video('test.mp3', model=args.model)
 
     if os.path.exists("script.json"):
         if args.pause > 0:
