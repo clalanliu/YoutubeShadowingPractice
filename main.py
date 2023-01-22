@@ -12,7 +12,7 @@ def get_parser():
     parser.add_argument('--force', '-f', help="Force downlading", action="store_true")
     parser.add_argument('--pause', '-p', help="If set, pause # second after each segment", default=0, type=float)
     parser.add_argument('--model', '-m', help="Model Size [tiny|base|small|medium|large]", default="base")
-    parser.add_argument('--words', '-w', help="Pause at least # words", default=5, type=int)
+    parser.add_argument('--words', '-w', help="Pause after at least # words", default=5, type=int)
     return parser
 
 if __name__ == "__main__":
