@@ -47,7 +47,7 @@ def play(mp3_path="test.mp3", script_path='script.json', stop=0, n_words=10):
         end = seg['end']*1000
 
         mp3 = mp3_full[int(start):int(end)]
-        print(seg['text'])
+        print(f"[{time.strftime('%H:%M:%S', time.gmtime(seg['start']))}:{time.strftime('%H:%M:%S', time.gmtime(seg['end']))}]{seg['text']}")
         stream = player.open(format = player.get_format_from_width(mp3.sample_width),
             channels = mp3.channels,
             rate = mp3.frame_rate,

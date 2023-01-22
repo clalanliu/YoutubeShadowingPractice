@@ -1,6 +1,8 @@
 # Shadowing Practice Using Python
 **Make your own VoiceTube.**
 [Demo Video](https://www.youtube.com/watch?v=CEIoTZkU71c)
+![img](image.png)
+This is an applicaion using [whisper](https://github.com/openai/whisper).
 
 ## Installation
 ```
