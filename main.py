@@ -13,6 +13,7 @@ def get_parser():
     parser.add_argument('--pause', '-p', help="If set, pause # second after each segment", default=0, type=float)
     parser.add_argument('--model', '-m', help="Model Size [tiny|base|small|medium|large]", default="base")
     parser.add_argument('--words', '-w', help="Pause after at least # words", default=5, type=int)
+    parser.add_argument('--speed', '-s', help="Adjust speed to #-X. Default 1-X. If negative, represents for #-words per min.", default=1.0, type=float)
     return parser
 
 if __name__ == "__main__":
@@ -31,4 +32,4 @@ if __name__ == "__main__":
         if args.pause > 0:
             print(f"Playing with pause={args.pause} seconds")
             
-        play('test.mp3', 'script.json', stop=args.pause, n_words=args.words)
+        play('test.mp3', 'script.json', stop=args.pause, n_words=args.words, speed=args.speed)

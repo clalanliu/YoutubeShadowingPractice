@@ -11,7 +11,7 @@ pip install -r requirements.txt
 
 ## Usage
 ```
-python main.py [-url YOUTUBE_URL] [--pause] [--force] [--model=base] [--words=5]
+python main.py [-url YOUTUBE_URL] [--pause] [--force] [--model=base] [--words=5] [--speed=1.0]
 ```
 `--url`: Specify Youtube link. It is required for the first time use. If not set, play cached video.
 
@@ -23,6 +23,4 @@ python main.py [-url YOUTUBE_URL] [--pause] [--force] [--model=base] [--words=5]
 
 `--words`: At least # words in a segment. Default 5.
 
-
-## Todo
- - adjust speed
+`--speed`: Adjust speed to #-X. Default 1-X. If negative, represents for #-words per min.
