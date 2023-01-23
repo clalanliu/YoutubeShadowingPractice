@@ -23,4 +23,4 @@ python main.py [-url YOUTUBE_URL] [--pause] [--force] [--model=base] [--words=5]
 
 `--words`: At least # words in a segment. Default 5.
 
-`--speed`: Adjust speed to #-X. Default 1-X. If negative, represents for #-words per min.
+`--speed`: **Adjust speed to #-X. Default 1-X. If negative, represents for #-words per min.**
