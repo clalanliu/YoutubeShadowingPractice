@@ -1,6 +1,8 @@
+numpy==1.21.5
 openai_whisper==20230117
 PyAudio==0.2.12
 pydub==0.25.1
+pyrubberband==0.3.0
 pytube==12.1.2
 pytube3==9.6.4
 whisper==1.1.10
