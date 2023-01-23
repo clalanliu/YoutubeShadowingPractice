@@ -9,6 +9,9 @@ This is an applicaion using [whisper](https://github.com/openai/whisper).
 pip install -r requirements.txt
 ```
 
+For cpu user:
+1. Install torch first: `pip3 install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cpu`
+
 ## Usage
 ```
 python main.py [-url YOUTUBE_URL] [--pause] [--force] [--model=base] [--words=5] [--speed=1.0]
