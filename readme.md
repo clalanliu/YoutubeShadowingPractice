@@ -13,9 +13,18 @@ For cpu user:
 1. Install torch first: `pip3 install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cpu`
 
 ## Usage
+For Youtube link:
 ```
 python main.py [-url YOUTUBE_URL] [--pause] [--force] [--model=base] [--words=5] [--speed=1.0]
 ```
+
+For mp4 or mp3 files:
+```
+python mp4_to_mp3.py mp4filename.mp4  
+python video2script.py mp4filename.mp4
+python main.py [--pause] [--force] [--model=base] [--words=5] [--speed=1.0]
+```
+
 `--url`: Specify Youtube link. It is required for the first time use. If not set, play cached video. \
 `--pause`: Manually set pause duration. If not set, It will equal the original sentence duration. \
 `--force`: Re-processing video  \
