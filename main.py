@@ -26,7 +26,7 @@ if __name__ == "__main__":
             print("Converting ...")
             convert_video_to_audio_ffmpeg('test.mp4')
             print("Generating Scripts ...")
-            split_video('test.mp3', model=args.model)
+            split_video('test.mp3', model=args.model, prune=True)
 
     if os.path.exists("script.json"):
         if args.pause > 0:

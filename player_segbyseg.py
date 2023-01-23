@@ -42,7 +42,10 @@ def play(mp3_path="test.mp3", script_path='script.json', stop=0, n_words=10, spe
     mp3_full = AudioSegment.from_mp3(mp3_path)
     
     # Adjust speed
-    word_per_min = len(data['text'].split()) / (mp3_full.duration_seconds/60) 
+    if 'text' in data.keys():
+        word_per_min = len(data['text'].split()) / (mp3_full.duration_seconds/60) 
+    else: 
+        word_per_min = data['text-length'] / (mp3_full.duration_seconds/60) 
     print(f"Original speed: {word_per_min:.04}/min")
     if speed > 0 and not np.isclose(speed, 1.0):
         print(f"Adjusting Speed to {speed*word_per_min:.04}/min. ({speed}x)")
