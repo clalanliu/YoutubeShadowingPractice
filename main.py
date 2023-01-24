@@ -1,4 +1,4 @@
-from get_video_from_yt import donwload
+from get_video_from_yt import download
 from mp4_to_mp3 import convert_video_to_audio_ffmpeg
 from video2script import split_video
 import sys
@@ -22,7 +22,7 @@ if __name__ == "__main__":
     if args.url != None:
         if not os.path.exists("script.json") or args.force:
             print("Downloading ...")
-            donwload(args.url)
+            download(args.url)
             print("Converting ...")
             convert_video_to_audio_ffmpeg('test.mp4')
             print("Generating Scripts ...")
