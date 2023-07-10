@@ -15,7 +15,7 @@ For cpu user:
 ## Usage
 For Youtube link:
 ```
-python main.py [-url YOUTUBE_URL] [--pause] [--force] [--model=base] [--words=5] [--speed=1.0]
+python main.py [--url YOUTUBE_URL] [--pause] [--force] [--model=base] [--words=5] [--speed=1.0]
 ```
 
 For mp4 or mp3 files:
