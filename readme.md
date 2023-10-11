@@ -1,8 +1,11 @@
 # Shadowing Practice Using Python
 **Make your own VoiceTube.**
 [Demo Video](https://www.youtube.com/watch?v=CEIoTZkU71c)
-![img](image.png)
+![img](image.png)   
 This is an applicaion using [whisper](https://github.com/openai/whisper).
+
+GUI support   
+![img](gui.png)
 
 ## Installation
 ```
@@ -13,6 +16,11 @@ For cpu user:
 1. Install torch first: `pip3 install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cpu`
 
 ## Usage
+GUI  
+```
+python gui.py
+```
+
 For Youtube link:
 ```
 python main.py [--url YOUTUBE_URL] [--pause] [--force] [--model=base] [--words=5] [--speed=1.0]
