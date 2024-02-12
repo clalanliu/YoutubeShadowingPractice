@@ -30,7 +30,7 @@ def split_video(vid, language='English', output="script.json", model="base", pru
       result = result_concise
 
    with open(output, "w") as outfile:
-      json.dump(result, outfile, indent = 4) 
+      json.dump(result, outfile, indent = 4, ensure_ascii=False) 
 
 
 if __name__ == "__main__":
