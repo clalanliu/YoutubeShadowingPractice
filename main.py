@@ -14,6 +14,7 @@ def get_parser():
     parser.add_argument('--model', '-m', help="Model Size [tiny|base|small|medium|large]", default="base")
     parser.add_argument('--words', '-w', help="Pause after at least # words", default=5, type=int)
     parser.add_argument('--speed', '-s', help="Adjust speed to #-X. Default 1-X. If negative, represents for #-words per min.", default=1.0, type=float)
+    parser.add_argument('--lang', '-l', help="Change default language", default='English')
     return parser
 
 if __name__ == "__main__":
@@ -26,7 +27,7 @@ if __name__ == "__main__":
             print("Converting ...")
             convert_video_to_audio_ffmpeg('test.mp4')
             print("Generating Scripts ...")
-            split_video('test.mp3', model=args.model, prune=True)
+            split_video('test.mp3', model=args.model, prune=True, language=args.language)
 
     if os.path.exists("script.json"):
         if args.pause > 0:
